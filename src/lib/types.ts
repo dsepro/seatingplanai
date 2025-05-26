@@ -7,9 +7,9 @@ export interface Student {
   rollNo?: string;
   studentClass?: string;
   role?: string;
-  // Fields for AI suggestions
-  performance?: 'high' | 'medium' | 'low' | string; // Allow string for flexibility
-  behavior?: string; // e.g., disruptive, quiet, leader
+  // Fields for AI suggestions (kept for potential future use, but not currently active)
+  performance?: 'high' | 'medium' | 'low' | string; 
+  behavior?: string; 
 }
 
 export interface TeacherInfo {
@@ -37,7 +37,8 @@ export type AppLanguage = 'en' | 'zh';
 
 export type ThemeMode = 'light' | 'dark';
 
-export interface HistoryEntry {
-  assignments: SeatingAssignment;
-  students: Student[]; // To restore student list order if needed, though current logic handles it separately
-}
+// HistoryEntry is no longer needed as history feature is removed.
+// export interface HistoryEntry {
+//   assignments: SeatingAssignment;
+//   students: Student[]; 
+// }

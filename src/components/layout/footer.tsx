@@ -8,7 +8,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ T }) => {
   return (
     <footer className="p-3 text-center text-xs text-muted-foreground bg-card border-t print:hidden">
-      {T.footerText} <a href={`mailto:${T.footerEmail}`} className="text-primary hover:underline">{T.footerEmail}</a>
+      {T.footerText}
     </footer>
   );
 };

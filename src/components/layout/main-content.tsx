@@ -2,7 +2,8 @@
 "use client";
 import React from 'react';
 import { SeatingGrid } from '@/components/seating-grid';
-import { InstructionsPanel } from '@/components/panels/instructions-panel'; // Added import
+import { InstructionsPanel } from '@/components/panels/instructions-panel'; 
+import { HtmlExportPanel } from '@/components/panels/html-export-panel'; // Added import
 import type { useSeatingPlan } from '@/hooks/useSeatingPlan';
 
 type SeatingPlanHook = ReturnType<typeof useSeatingPlan>;
@@ -11,17 +12,20 @@ interface MainContentProps extends SeatingPlanHook {
   // Props passed from useSeatingPlan
 }
 
-export const MainContent: React.FC<MainContentProps> = ({
-  seatingAssignments,
-  layoutSettings,
-  getStudentById,
-  onDropStudentToSeat,
-  onRemoveStudentFromSeat,
-  handleSeatClick,
-  selectedStudentForClickDrop,
-  teacherInfo, // For displaying title info
-  T,
-}) => {
+export const MainContent: React.FC<MainContentProps> = (props) => {
+  const {
+    seatingAssignments,
+    layoutSettings,
+    getStudentById,
+    onDropStudentToSeat,
+    onRemoveStudentFromSeat,
+    handleSeatClick,
+    selectedStudentForClickDrop,
+    teacherInfo, 
+    T,
+    // students, // No longer needed to be explicitly passed if props are spread
+  } = props;
+
   return (
     <main className="flex-1 p-3 md:p-6 overflow-y-auto bg-muted/30 print:overflow-visible print:bg-white">
       <div className="max-w-7xl mx-auto">
@@ -59,6 +63,10 @@ export const MainContent: React.FC<MainContentProps> = ({
 
         <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-lg shadow-md border bg-card">
           <InstructionsPanel T={T} />
+        </div>
+
+        <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-lg shadow-md border bg-card">
+          <HtmlExportPanel {...props} />
         </div>
 
         {layoutSettings.additionalNotes && (

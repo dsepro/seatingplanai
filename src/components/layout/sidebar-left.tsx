@@ -6,10 +6,10 @@ import { StudentDataPanel } from '@/components/panels/student-data-panel';
 import { TeacherInfoPanel } from '@/components/panels/teacher-info-panel';
 import { LayoutSettingsPanel } from '@/components/panels/layout-settings-panel';
 import { AutoAssignPanel } from '@/components/panels/auto-assign-panel';
-import { HtmlExportPanel } from '@/components/panels/html-export-panel';
+// HtmlExportPanel removed from here
 // InstructionsPanel removed from here
 import type { useSeatingPlan } from '@/hooks/useSeatingPlan'; 
-import { Users, UserCircle, Settings, ListChecks, FileCode } from 'lucide-react'; // HelpCircle removed
+import { Users, UserCircle, Settings, ListChecks } from 'lucide-react'; // FileCode, HelpCircle removed
 
 type SeatingPlanHook = ReturnType<typeof useSeatingPlan>;
 
@@ -25,12 +25,13 @@ export const SidebarLeft: React.FC<SidebarLeftProps> = (props) => {
 
   // Grouping panels with titles for clarity
   // InstructionsPanel removed from this group
+  // HtmlExportPanel removed from this group
   const panelGroups = [
     { title: T.studentDataTab, Icon: Users, Component: StudentDataPanel, id: "studentData" },
     { title: T.teacherInfoTab, Icon: UserCircle, Component: TeacherInfoPanel, id: "teacherInfo" },
     { title: T.layoutSettingsTab, Icon: Settings, Component: LayoutSettingsPanel, id: "layoutSettings" },
     { title: T.autoAssignTab, Icon: ListChecks, Component: AutoAssignPanel, id: "autoAssign" },
-    { title: T.htmlExportTab, Icon: FileCode, Component: HtmlExportPanel, id: "htmlExport" },
+    // { title: T.htmlExportTab, Icon: FileCode, Component: HtmlExportPanel, id: "htmlExport" }, // Removed
     // { title: T.instructionsTab, Icon: HelpCircle, Component: InstructionsPanel, id: "instructions" }, // Removed
   ];
 

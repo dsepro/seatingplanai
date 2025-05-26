@@ -1,3 +1,4 @@
+
 "use client";
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -37,8 +38,8 @@ export const SidebarLeft: React.FC<SidebarLeftProps> = (props) => {
   ];
 
   return (
-    <aside className="w-full md:w-[380px] lg:w-[420px] bg-card p-3 md:p-4 space-y-1 overflow-y-auto print:hidden border-r flex-shrink-0">
-      <ScrollArea className="h-[calc(100vh-80px)] md:h-[calc(100vh-60px)]"> {/* Adjusted height */}
+    <aside className="w-full md:w-[380px] lg:w-[420px] bg-card p-3 md:p-4 print:hidden border-r flex flex-col flex-shrink-0">
+      <ScrollArea className="flex-1"> {/* Changed to flex-1 to take available height */}
         <div className="space-y-6 p-1">
           {panelGroups.map(({ title, Icon, Component, id }) => (
             <section key={id} aria-labelledby={`${id}-panel-title`}>

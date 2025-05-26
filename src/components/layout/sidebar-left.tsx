@@ -7,9 +7,9 @@ import { TeacherInfoPanel } from '@/components/panels/teacher-info-panel';
 import { LayoutSettingsPanel } from '@/components/panels/layout-settings-panel';
 import { AutoAssignPanel } from '@/components/panels/auto-assign-panel';
 import { HtmlExportPanel } from '@/components/panels/html-export-panel';
-import { InstructionsPanel } from '@/components/panels/instructions-panel';
+// InstructionsPanel removed from here
 import type { useSeatingPlan } from '@/hooks/useSeatingPlan'; 
-import { Users, UserCircle, Settings, ListChecks, FileCode, HelpCircle } from 'lucide-react';
+import { Users, UserCircle, Settings, ListChecks, FileCode } from 'lucide-react'; // HelpCircle removed
 
 type SeatingPlanHook = ReturnType<typeof useSeatingPlan>;
 
@@ -19,27 +19,24 @@ interface SidebarLeftProps extends SeatingPlanHook {
 
 export const SidebarLeft: React.FC<SidebarLeftProps> = (props) => {
   const {
-    layoutSettings, // for HTML Export panel
-    teacherInfo,    // for HTML Export panel
-    seatingAssignments, // for HTML Export panel
-    getStudentById, // for HTML Export panel
     T,
   } = props;
 
 
   // Grouping panels with titles for clarity
+  // InstructionsPanel removed from this group
   const panelGroups = [
     { title: T.studentDataTab, Icon: Users, Component: StudentDataPanel, id: "studentData" },
     { title: T.teacherInfoTab, Icon: UserCircle, Component: TeacherInfoPanel, id: "teacherInfo" },
     { title: T.layoutSettingsTab, Icon: Settings, Component: LayoutSettingsPanel, id: "layoutSettings" },
     { title: T.autoAssignTab, Icon: ListChecks, Component: AutoAssignPanel, id: "autoAssign" },
     { title: T.htmlExportTab, Icon: FileCode, Component: HtmlExportPanel, id: "htmlExport" },
-    { title: T.instructionsTab, Icon: HelpCircle, Component: InstructionsPanel, id: "instructions" },
+    // { title: T.instructionsTab, Icon: HelpCircle, Component: InstructionsPanel, id: "instructions" }, // Removed
   ];
 
   return (
     <aside className="w-full md:w-[380px] lg:w-[420px] bg-card p-3 md:p-4 print:hidden border-r flex flex-col flex-shrink-0">
-      <ScrollArea className="flex-1"> {/* Changed to flex-1 to take available height */}
+      <ScrollArea className="flex-1">
         <div className="space-y-6 p-1">
           {panelGroups.map(({ title, Icon, Component, id }) => (
             <section key={id} aria-labelledby={`${id}-panel-title`}>
@@ -57,3 +54,4 @@ export const SidebarLeft: React.FC<SidebarLeftProps> = (props) => {
     </aside>
   );
 };
+

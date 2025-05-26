@@ -1,6 +1,8 @@
+
 "use client";
 import React from 'react';
 import { SeatingGrid } from '@/components/seating-grid';
+import { InstructionsPanel } from '@/components/panels/instructions-panel'; // Added import
 import type { useSeatingPlan } from '@/hooks/useSeatingPlan';
 
 type SeatingPlanHook = ReturnType<typeof useSeatingPlan>;
@@ -54,6 +56,10 @@ export const MainContent: React.FC<MainContentProps> = ({
                 {T.teacherDeskText}
             </div>
         )}
+
+        <div className="mt-4 md:mt-6 p-3 md:p-4 rounded-lg shadow-md border bg-card">
+          <InstructionsPanel T={T} />
+        </div>
 
         {layoutSettings.additionalNotes && (
             <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t print:mt-4 print:pt-2 print:border-gray-300">

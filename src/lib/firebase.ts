@@ -1,3 +1,4 @@
+
 import { initializeApp, getApp, getApps, type FirebaseApp } from 'firebase/app';
 import { getAuth, type Auth } from 'firebase/auth';
 import { getFirestore, type Firestore } from 'firebase/firestore';
@@ -21,6 +22,16 @@ const firebaseConfig = firebaseConfigFromWindow || {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "YOUR_MESSAGING_SENDER_ID",
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "YOUR_APP_ID",
 };
+
+if (firebaseConfig.apiKey === "YOUR_API_KEY" || !firebaseConfig.apiKey) {
+  console.warn(
+    "Firebase Configuration Warning: The API Key is missing or using a placeholder ('YOUR_API_KEY'). " +
+    "Please ensure your Firebase project configuration (API Key, Auth Domain, Project ID, etc.) is correctly " +
+    "set up in your environment variables (e.g., .env.local with NEXT_PUBLIC_FIREBASE_API_KEY) " +
+    "or via `window.__firebase_config` for the application to function correctly with Firebase services. " +
+    "You are seeing this message because the current API key is likely invalid, leading to authentication errors."
+  );
+}
 
 let app: FirebaseApp;
 let auth: Auth;

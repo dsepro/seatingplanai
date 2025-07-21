@@ -7,9 +7,6 @@ export interface Student {
   rollNo?: string;
   studentClass?: string;
   role?: string;
-  // Fields for AI suggestions (kept for potential future use, but not currently active)
-  performance?: 'high' | 'medium' | 'low' | string; 
-  behavior?: string; 
 }
 
 export interface TeacherInfo {
@@ -36,9 +33,3 @@ export const ItemTypes = {
 export type AppLanguage = 'en' | 'zh';
 
 export type ThemeMode = 'light' | 'dark';
-
-// HistoryEntry is no longer needed as history feature is removed.
-// export interface HistoryEntry {
-//   assignments: SeatingAssignment;
-//   students: Student[]; 
-// }

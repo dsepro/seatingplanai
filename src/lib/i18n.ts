@@ -1,3 +1,4 @@
+
 import type { AppLanguage } from './types';
 
 export const uiStrings = {
@@ -11,7 +12,7 @@ export const uiStrings = {
         htmlExportTab: "HTML Export",
         instructionsTab: "Help",
         importStudentListTitle: "Import Student List",
-        pasteStudentListPlaceholder: "Paste student list here. One student per line.\nFormat: English Name, Nickname (Optional), Chinese Name, (Class No.), Role (Optional), Performance (Optional), Behavior (Optional)\nExample: Chung Wing, Louis, 鍾永, (99), Monitor, High, Leader",
+        pasteStudentListPlaceholder: "Paste student list here. One student per line.\nFormat: English Name, Nickname (Optional), Chinese Name, (Class No.), Role (Optional)\nExample: Chung Wing, Louis, 鍾永, (99), Monitor",
         importAndReplaceButton: "Import & Replace Current List",
         importSuccessMessage: "Student list imported and replaced successfully!",
         currentStudentListTitle: "Student List", 
@@ -58,7 +59,7 @@ export const uiStrings = {
         copiedMessage: "Copied to clipboard!",
         instructionsTitle: "How to Use",
         instrPrefill: "A default list of 40 students is provided. Their format is shown in the 'Import Student List' text area.",
-        instrImport: "To update: Prepare your list (one student per line: `English Name, Nickname, Chinese Name, (Class No.), Role, Performance, Behavior`), paste it into the text area, and click 'Import & Replace'. Performance & Behavior are optional.",
+        instrImport: "To update: Prepare your list (one student per line: `English Name, Nickname, Chinese Name, (Class No.), Role`), paste it into the text area, and click 'Import & Replace'.",
         instrTeacherInfo: "Enter teacher and class details in the 'Teacher Info' tab.",
         instrDragDrop: "Drag unseated students from the 'Student List' to empty seats. You can also drag students within the plan to swap seats.",
         instrClickDrop: "Alternatively, click an unseated student in the list (they'll be highlighted), then click an empty seat in the preview to place them.",
@@ -92,7 +93,7 @@ export const uiStrings = {
         htmlExportTab: "HTML匯出",
         instructionsTab: "輔助說明",
         importStudentListTitle: "匯入學生名單",
-        pasteStudentListPlaceholder: "在此貼上學生名單。每行一位學生。\n格式：英文姓名, 英文暱稱 (可選), 中文姓名, (班號), 職位 (可選), 表現 (可選), 行為 (可選)\n例如：Chung Wing, Louis, 鍾永, (99), 班長, High, Leader",
+        pasteStudentListPlaceholder: "在此貼上學生名單。每行一位學生。\n格式：英文姓名, 英文暱稱 (可選), 中文姓名, (班號), 職位 (可選)\n例如：Chung Wing, Louis, 鍾永, (99), 班長",
         importAndReplaceButton: "匯入並取代現有名單",
         importSuccessMessage: "學生名單已成功匯入並取代！",
         currentStudentListTitle: "學生名單", 
@@ -139,7 +140,7 @@ export const uiStrings = {
         copiedMessage: "已複製到剪貼簿!",
         instructionsTitle: "操作指南",
         instrPrefill: "系統已預載40位預設學生，其格式顯示於「匯入學生名單」文字區內。",
-        instrImport: "如需更新學生名單，請依照文字區的格式（每行一位學生：`英文姓名, 英文暱稱, 中文姓名, (班號), 職位, 表現, 行為`）準備您的名單，然後貼上並點擊「匯入並取代現有名單」。表現及行為欄位為選填。",
+        instrImport: "如需更新學生名單，請依照文字區的格式（每行一位學生：`英文姓名, 英文暱稱, 中文姓名, (班號), 職位`）準備您的名單，然後貼上並點擊「匯入並取代現有名單」。",
         instrTeacherInfo: "在「教師資訊」分頁輸入教師和班級資料。",
         instrDragDrop: "從「學生名單」將未就座的學生拖曳到座位表中的空位。您也可以在座位表內拖曳學生以交換位置。",
         instrClickDrop: "或者，在學生名單中點擊一位未就座的學生（該學生會被突顯），然後點擊座位表預覽中的空位以放置該學生。",

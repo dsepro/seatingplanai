@@ -3,7 +3,7 @@ import type { AppLanguage } from './types';
 
 export const uiStrings = {
     en: {
-        appTitle: "Seating Sage - Classroom Seating Plan Maker",
+        appTitle: "Seating Plan Maker - 課室座位表製作工具",
         openPlanInNewWindow: "Open Plan (New Window)",
         studentDataTab: "Student Data",
         teacherInfoTab: "Teacher Info",
@@ -67,6 +67,8 @@ export const uiStrings = {
         instrRemoveFromSeat: "Click the trash icon on a student's card in a seat to remove them.",
         instrAutoAssign: "Use 'Auto Assign' to fill empty seats. Click 'Clear All Seats' first for a completely new arrangement.",
         instrLayout: "Adjust rows, columns, title, etc., in 'Layout Settings'. Settings are applied automatically for the current session.",
+        instrAiSuggest: "Use 'AI Suggestions' to get an AI-powered seating arrangement based on your criteria.",
+        instrUndoRedo: "Use the 'Undo' and 'Redo' buttons to navigate through your changes.",
         instrOpenPlanInNewWindow: "Use 'Open Plan (New Window)' in the header to view the plan in a new tab.",
         instrHtmlExport: "Use 'Generate/Refresh HTML' to create an HTML version of the plan for copying or downloading.",
         confirmClearSeatsMessage: "Are you sure you want to clear all seats? This will remove all assigned students from the grid, but the student list and other settings will remain.", 
@@ -82,9 +84,18 @@ export const uiStrings = {
         toggleTheme: "Toggle Theme",
         switchLanguage: "Switch Language",
         footerText: "Designed by Mr. Louis Chung",
+        aiSuggestionsTab: "AI Suggestions",
+        aiCriteriaLabel: "Seating Criteria",
+        aiCriteriaPlaceholder: "e.g., Mix high and low performers, separate disruptive students...",
+        getAiSuggestionButton: "Get AI Suggestion",
+        aiSuggestionInProgress: "Getting Suggestion...",
+        aiReasoningTitle: "AI Reasoning",
+        undoRedoControlsTitle: "History",
+        undoButton: "Undo",
+        redoButton: "Redo",
     },
     zh: {
-        appTitle: "Seating Sage - 課室座位表製作工具",
+        appTitle: "Seating Plan Maker - 課室座位表製作工具",
         openPlanInNewWindow: "在新視窗開啟", 
         studentDataTab: "學生資料",
         teacherInfoTab: "教師資訊",
@@ -148,6 +159,8 @@ export const uiStrings = {
         instrRemoveFromSeat: "點擊已就座學生卡片上的垃圾桶圖示，可將其從該座位移除。",
         instrAutoAssign: "使用「自動分配」功能快速填滿空位。若要完全重新分配，請先點擊「清空所有座位」。",
         instrLayout: "在「版面配置設定」中調整行數、列數、標題等。設定會自動套用於目前瀏覽器工作階段。",
+        instrAiSuggest: "使用「AI建議」功能，根據您設定的條件，獲取由AI驅動的座位表建議。",
+        instrUndoRedo: "使用「上一步」和「下一步」按鈕來瀏覽您的變更歷史。",
         instrOpenPlanInNewWindow: "使用頁首的「在新視窗開啟」按鈕，在新的分頁/視窗中檢視已完成的座位表。",
         instrHtmlExport: "使用「產生/重新整理 HTML」功能，可以建立座位表的 HTML 版本，方便您複製貼到其他地方，或下載為 .html 檔案。",
         confirmClearSeatsMessage: "您確定要清空所有座位嗎？這將會從格線中移除所有已分配的學生，但學生名單和其他設定將會保留。", 
@@ -163,6 +176,15 @@ export const uiStrings = {
         toggleTheme: "切換主題",
         switchLanguage: "切換語言",
         footerText: "由鍾永老師製作",
+        aiSuggestionsTab: "AI 建議",
+        aiCriteriaLabel: "座位安排準則",
+        aiCriteriaPlaceholder: "例如：混合高低分學生、分開調皮學生...",
+        getAiSuggestionButton: "獲取 AI 建議",
+        aiSuggestionInProgress: "正在獲取建議...",
+        aiReasoningTitle: "AI 分析原因",
+        undoRedoControlsTitle: "操作歷史",
+        undoButton: "復原",
+        redoButton: "取消復原",
     }
 };
 

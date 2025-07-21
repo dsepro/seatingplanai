@@ -10,8 +10,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Seating Sage - Classroom Seating Plan Maker",
-  description: "AI-Powered Classroom Seating Plan Maker by Mr. Louis Chung",
+  title: "Seating Plan Maker - 課室座位表製作工具",
+  description: "Classroom Seating Plan Maker by Mr. Louis Chung",
 };
 
 export default function RootLayout({

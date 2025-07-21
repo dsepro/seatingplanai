@@ -7,7 +7,7 @@ const presetStudentDataStrings = [
     "李小芳 Lee Siu Fong, Jenny, Class Representative", 
     "黃志強 Wong Chi Keung, Alex, Sports Captain",
     "吳麗珍 Ng Lai Chun, Angela, Librarian", 
-    "張國榮 Cheung Kwok Wing, Leslie, Music Club President", 
+    "林家謙 Lam Kam Him, Terence, Music Club President", 
     "周嘉儀 Chow Ka Yee, Mandy, Vice Monitor",
     "林志明 Lam Chi Ming, Jason, Debate Team Leader", 
     "馬嘉豪 Ma Ka Ho, Kelvin, IT Prefect", 

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { ThemeToggleButton } from '@/components/theme-toggle-button';
 import { LanguageToggleButton } from '@/components/language-toggle-button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface HeaderProps {
   T: any; // Translated strings
@@ -17,11 +18,18 @@ export const Header: React.FC<HeaderProps> = ({ T, onOpenInNewWindow }) => {
         {T.appTitle}
       </h1>
       <div className="flex items-center space-x-1 md:space-x-2">
-        <Button onClick={onOpenInNewWindow} title={T.openPlanInNewWindow} className="text-xs md:text-sm px-2 py-1 md:px-3 h-8 md:h-9" variant="default">
-          <ExternalLink size={14} className="mr-1 md:mr-2" />
-          <span className="hidden sm:inline">{T.openPlanInNewWindow}</span>
-          <span className="sm:hidden">Open</span>
-        </Button>
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    <Button onClick={onOpenInNewWindow} variant="outline" size="icon" aria-label={T.openPlanInNewWindow}>
+                        <ExternalLink className="h-[1.2rem] w-[1.2rem]" />
+                    </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>{T.openPlanInNewWindow}</p>
+                </TooltipContent>
+            </Tooltip>
+        </TooltipProvider>
         <ThemeToggleButton />
         <LanguageToggleButton />
       </div>
